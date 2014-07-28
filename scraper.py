@@ -1,11 +1,16 @@
 # This is a template for a Python scraper on Morph (https://morph.io)
 # including some code snippets below that you should find helpful
 
-# import scraperwiki
+import scraperwiki
+from bs4 import BeautifulSoup
+
 # import lxml.html
 #
 # # Read in a page
-# html = scraperwiki.scrape("http://foo.com")
+# html = scraperwiki.scrape("http://warded.se/turf/round.php?round=49&sort=2&order=0&rid=139")
+soup = BeautifulSoup("http://warded.se/turf/round.php?round=49&sort=2&order=0&rid=139")
+print(soup.prettify())
+
 #
 # # Find something on the page using css selectors
 # root = lxml.html.fromstring(html)
